@@ -1,0 +1,426 @@
+\documentclass[12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\usepackage{makeidx}
+
+\makeindex
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  pdftitle={Catan: The Industrial Revolution Expansion - Official Manual}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\setlength{\headheight}{15pt}
+\setstretch{1.1}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Catan: The Industrial Revolution Expansion}
+\fancyhead[R]{Official Rules Manual}
+\fancyfoot[C]{\thepage}
+
+\titleformat{\chapter}[display]
+{\normalfont\bfseries\Large}
+{\chaptername\ \thechapter}
+{0.5em}
+{\LARGE}
+
+\newtcolorbox{warningbox}{
+  colback=black!3,
+  colframe=black!65,
+  title=Warning,
+  fonttitle=\bfseries,
+  fontupper=\small
+}
+
+\newtcolorbox{notebox}{
+  colback=black!2,
+  colframe=black!35,
+  title=Note,
+  fonttitle=\bfseries
+}
+
+\begin{document}
+
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+  \centering
+  \vspace*{2.5cm}
+
+  {\Huge \textbf{CATAN: THE INDUSTRIAL REVOLUTION EXPANSION} \par}
+  \vspace{0.75cm}
+  {\Large Official Rules Manual \par}
+
+  \vspace{2cm}
+
+  {\large \textbf{Author} \par}
+  {\Large VARGAS Daniel \par}
+
+  \vspace{0.75cm}
+
+  {\large \textbf{Acknowledgement} \par}
+  {\normalsize Inspired by concepts originally created by Ethanol, the creator of Cursed Catan.\par}
+
+  \vfill
+
+  {\normalsize Version 1.0 \par}
+  {\normalsize \today \par}
+
+  \vspace{1.2cm}
+
+\end{titlepage}
+\clearpage
+\hypersetup{pageanchor=true}
+
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\chapter{Required Materials}
+\index{materials}
+
+This chapter lists every game and component needed to play the expansion.
+
+Catan: The Industrial Revolution Expansion is designed to be played using only components from the base Settlers of Catan game and pieces from other common board games, so no custom components are required.
+
+\section*{Required Base Games}
+\begin{itemize}[leftmargin=1.2cm]
+  \item \textbf{Settlers of Catan} base game.
+  \item \textbf{Risk} base game (for military pieces and combat dice, any game with distinct small figurines and standard six-sided dice will work).
+  \item \textbf{Monopoly} base game (for factories and Centers of Operation, any game with distinct building pieces will work).
+\end{itemize}
+
+\section*{Optional Game}
+\begin{itemize}[leftmargin=1.2cm]
+  \item \textbf{Catan 5--6 Player Expansion} (optional, if playing with five or six players).
+\end{itemize}
+
+\chapter{Base Catan Rules}
+\index{base rules}
+
+\textbf{If all players are already familiar with standard Catan, skip this chapter and proceed to Chapter 3.}
+
+\section{Objective and Victory}
+\index{victory points}
+The objective of Catan is to be the first player to reach 10 victory points. Players earn victory points through various means, including building settlements and cities, acquiring development cards, and achieving special awards.
+
+\textbf{Common victory point sources:}
+\begin{itemize}[leftmargin=1.2cm]
+  \item Settlement: 1 victory point each.
+  \item City: 2 victory points each.
+  \item Longest Road card: 2 victory points.
+  \item Largest Army card: 2 victory points.
+  \item Victory Point cards: 1 victory point each.
+\end{itemize}
+
+\section{Setup Overview}
+\index{setup}
+\begin{enumerate}[leftmargin=1.2cm]
+  \item Build the Catan island with terrain hexes, number tokens, ports, and place the robber in the desert.
+  \item Each player chooses a color and takes the corresponding pieces (settlements, cities, roads).
+  \item Each player places two settlements and two roads on the board according to standard placement rules.
+  \item Shuffle the development card deck and place it face down.
+  \item Determine the starting player (e.g., by dice roll).
+\end{enumerate}
+
+\section{Turn Structure}
+\index{turn order}
+On a player's turn, perform the following in sequence:
+\begin{enumerate}[leftmargin=1.2cm]
+  \item \textbf{Roll production dice} (2d6).
+  \item \textbf{Distribute resources} to players with settlements/cities adjacent to activated tiles.
+  \item \textbf{Resolve robber effects} if a 7 is rolled.
+  \item \textbf{Trade} with other players and/or the bank.
+  \item \textbf{Build and play development cards} as desired, following building costs and development card rules.
+\end{enumerate}
+
+\section{Resource Production Rules}
+\index{resource production}
+\begin{itemize}[leftmargin=1.2cm]
+  \item A settlement adjacent to an activated tile collects 1 matching resource.
+  \item A city adjacent to an activated tile collects 2 matching resources.
+  \item No resources are collected from a tile occupied by the robber.
+\end{itemize}
+
+\section{Building Costs}
+\index{building costs}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth} >{\raggedright\arraybackslash}p{0.75\textwidth}}
+  \toprule
+  \textbf{Item} & \textbf{Cost} \\
+  \midrule
+  Road & 1 Brick + 1 Lumber \\
+  Settlement & 1 Brick + 1 Lumber + 1 Wool + 1 Grain \\
+  City (upgrade) & 3 Stone + 2 Grain \\
+  Development Card & 1 Stone + 1 Grain + 1 Wool \\
+  \bottomrule
+\end{longtable}
+
+\section{Development Card Rules}
+\index{development cards}
+\begin{itemize}[leftmargin=1.2cm]
+  \item A development card purchased this turn may not be played this turn, except for revealed Victory Point cards.
+  \item At most one development card may be played per turn.
+\end{itemize}
+
+\section{Robber Rules}
+\index{robber}
+When a 7 is rolled:
+\begin{enumerate}[leftmargin=1.2cm]
+  \item Each player with more than 7 resource cards discards half (rounded up).
+  \item The active player moves the robber to any tile.
+  \item The active player steals one random resource card from one opponent with a settlement/city adjacent to that tile.
+\end{enumerate}
+
+\section{Longest Road and Largest Army}
+\index{Longest Road}
+\index{Largest Army}
+\textbf{Longest Road:}
+\begin{itemize}[leftmargin=1.2cm]
+  \item Awarded to the player with a continuous road of length at least 5.
+  \item Worth 2 victory points.
+\end{itemize}
+
+\textbf{Largest Army:}
+\begin{itemize}[leftmargin=1.2cm]
+  \item Awarded to the player who has played at least 3 Knight cards and has more played Knights than any other player.
+  \item Worth 2 victory points.
+\end{itemize}
+
+\chapter{Industrial Revolution Rules}
+\index{Industrial Revolution}
+
+Following the discovery of major coal deposits beneath Catan's hills and mountains, the island entered a rapid industrial era. Resource extraction accelerated, regional productivity rose sharply, and political tension increased across all settlements.
+
+\section{Coal Generation}
+\index{coal die}
+Coal is a special resource generated from stone and brick production.
+
+Whenever any player gains resource cards from a hill (brick) tile or a mountain (stone) tile, that player rolls the \textbf{coal die} (1d6) once for each resource card gained from those terrain types.
+
+On each roll of 6, the player gains \textbf{1 coal}.
+
+\textbf{Important:} The coal die must be a dedicated die, separate from both Catan production dice and all combat dice (oh yeah there's combat, but we'll get to that).
+
+\section{Coal Storage and Usage}
+\begin{itemize}[leftmargin=1.2cm]
+  \item Coal is represented by standard Monopoly houses (or any singular building piece from any board game).
+  \item Keep unspent coal visible near your unplayed settlement pieces.
+  \item Coal does not count as a standard resource card and is not part of hand-size checks from rolling a 7, yet it can be stolen by the robber.
+\end{itemize}
+
+\section{Coal Exchange}
+\index{conversion}
+A player may exchange coal at a rate of 1:1 for any single standard resource type during their turn.
+
+\section{Factory Construction}
+\index{factory construction}
+A player may spend coal during their own turn to build a factory.
+
+\textbf{Factory build cost:} 1 coal.
+
+\textbf{Placement rule:}
+\begin{itemize}[leftmargin=1.2cm]
+  \item The tile selected must be adjacent to at least one of the builder's own settlements or cities.
+  \item Place the factory marker on the \textbf{tile itself}, not on an intersection.
+  \item A tile can contain \textbf{only one factory} at any time.
+\end{itemize}
+
+\section{Factory Benefits}
+\index{double production}
+A factory doubles output from its tile whenever that tile is activated.
+
+\begin{itemize}[leftmargin=1.2cm]
+  \item Settlement adjacent to a factory tile: 2 matching resources instead of 1.
+  \item City adjacent to a factory tile: 4 matching resources instead of 2.
+  \item This benefit applies to \textbf{all players} with qualifying settlements/cities adjacent to that tile.
+\end{itemize}
+
+\begin{notebox}
+  The industrial revolution is all about exponential growth, constructing a factory on a hill or mountain tile won't just double your brick or stone production, but also double your chances to obtain coal from that tile, allowing you to build even more factories.
+\end{notebox}
+
+\chapter{Transition to War}
+\index{war trigger}
+
+When there are \textbf{5 total factories} on the board, the \textbf{Great War of Catan} begins immediately.
+
+Resolve the current player's turn normally, then apply Great War setup before the next player's turn starts. All players must participate in the war, even if they did not contribute to the factory count.
+
+If a player reaches 10 victory points before the war begins, they are declared the winner and the game ends immediately without entering the war phase.
+
+\begin{warningbox}
+  If you do not wish to spoil Part II of the game, stop reading here for now. Have fun.
+\end{warningbox}
+
+\chapter{The Great War of Catan}
+\index{Great War}
+
+The skies over Catan are choked with smog. The fires of progress burn in countless factories. The great powers of the island may have squabbled before, but now the stakes are higher than ever. Stealing sheep and bribing bandits will no longer suffice. This conflict must come to a decisive end.
+
+This chapter introduces the military phase. All standard Catan and Industrial Revolution rules remain in effect unless explicitly overridden here.
+
+\section{Components for War Setup}
+\index{war setup}
+\begin{itemize}[leftmargin=1.2cm]
+  \item Infantry and Artillery pieces represent military units. Use Risk infantry and Artillery pieces, or any distinct tokens if you don't have Risk.
+  \item Risk dice are used for combat resolution.
+  \item Monopoly hotels represent Centers of Operation (can be any distinct building piece if you don't have Monopoly).
+\end{itemize}
+
+\section{War Setup}
+\index{Center of Operation}
+% Preliminary procedures for beginning the Great War
+To begin the Great War for Catan, first determine how many victory points each player has. This includes revealing any Victory Point development cards in a player's hand. In addition, all Knight cards in a player's hand must be immediately played, without resolving their effects. Adjust the Largest Army award accordingly.
+
+The victory point threshold for victory is now 12 points instead of 10.
+
+Separate the players into the two factions based on the total number of players and their current victory point ranking:
+
+\begin{center}
+  \begin{tabular}{lll}
+    \toprule
+    \# of players & Revolutionary Entente Division (RED) & Board of Liberated Unions (BLU) \\
+    \midrule
+    2 & 1st place & 2nd place \\
+    3 & 1st and 3rd place & 2nd place \\
+    4 & 1st and 4th place & 2nd and 3rd place \\
+    5 & 1st, 4th, and 5th place & 2nd and 3rd place \\
+    6 & 1st, 4th, and 5th place & 2nd, 3rd, and 6th place \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+When war begins, all players then complete the following in turn order:
+\begin{enumerate}[leftmargin=1.2cm]
+  \item Place one \textbf{Center of Operation} on one tile adjacent to one of your own settlements or cities.
+  \item Deploy \textbf{3 infantry units} from your supply onto that tile with your Center of Operation; place all remaining military units of your color in your reserve.
+  \item For each settlement and city you control, place one additional infantry unit from your supply onto any unoccupied tile adjacent to that settlement, city, or your Center of Operation.
+  \item For each Knight card you have in hand, place one additional infantry unit from your supply onto any unoccupied tile adjacent to one of your settlements, cities, or your Center of Operation. Military units do not contribute to the largest army award.
+\end{enumerate}
+
+\textbf{Center of Operation rules:}
+\begin{itemize}[leftmargin=1.2cm]
+  \item Each player may only have one Center of Operation; if a player loses their Center, they cannot place a new one, but may continue to fight using their remaining military units.
+  \item A tile may host multiple players' military units, but only one Center of Operation marker total.
+  \item If the robber is on a tile with a Center of Operation, the robber's effects are ignored for that tile.
+\end{itemize}
+
+\section{Turn Sequence During War}
+\index{war turn order}
+
+\begin{enumerate}[leftmargin=1.2cm]
+  \item Roll production dice and distribute resources (including factory effects and coal dice).
+  \item Resolve robber if 7 is rolled.
+  \item Trade with players and/or bank.
+  \item \textbf{Command Step}: recruit, move military units, and resolve combat.
+  \item Build structures, roads, cities, and development cards as normal.
+\end{enumerate}
+
+\section{Recruitment}
+\index{recruitment}
+During your Command Step, you may recruit new \textbf{military units} (Infantry or Artillery) from your reserve by paying the appropriate recruitment cost for each unit.
+
+\textbf{Recruitment costs:}
+\begin{itemize}[leftmargin=1.2cm]
+  \item Infantry: 1 Stone + 1 Grain.
+  \item Artillery: 2 Stone + 2 Brick + 1 Coal.
+\end{itemize}
+
+\textbf{Placement:}
+Newly recruited military units must be placed on a tile adjacent to one of your own settlements, cities, or your Center of Operation. The tile must not contain an opponent's Center of Operation or be occupied by an opponent's military units.
+
+\section{Military Unit Movement}
+\index{movement}
+During your Command Step, you may move any number of your military units from one tile to an adjacent tile. Each military unit may only move once per turn.
+
+\section{Combat Resolution}
+\index{combat}
+
+\textbf{Initiating combat:}
+If attacking military units enter a tile containing enemy military units, battle begins.
+
+\textbf{Combat procedure:}
+\begin{itemize}[leftmargin=1.2cm]
+  \item Attacker rolls up to 3 dice, not exceeding the number of attacking military units committed.
+  \item Defender rolls up to 2 dice, not exceeding the number of defending military units present.
+\end{itemize}
+
+\textbf{Dice comparison:}
+\begin{itemize}[leftmargin=1.2cm]
+  \item Compare highest attack die to highest defense die: defender loses one military unit if attacker's die is higher, otherwise attacker loses one military unit.
+  \item If both sides rolled at least two dice, compare second-highest dice as well: defender loses one military unit if attacker's second die is higher, otherwise attacker loses one military unit.
+\end{itemize}
+
+\section{Structures and Sieges}
+\index{siege}
+Structures are not military units and are not removed by standard combat losses.
+
+After clearing enemy military units from a tile adjacent to an opponent settlement or city, or moving any number of military units into an unoccupied tile adjacent to an opponent settlement or city, the active player may declare a \textbf{siege attempt} during the same Command Step:
+\begin{itemize}[leftmargin=1.2cm]
+  \item Commit at least 2 attacking military units from adjacent tile(s).
+  \item Defender rolls 1 die for a settlement, or 2 dice for a city.
+  \item Attacker rolls 1 die. If the attacker committed at least 3 military units. Each additional committed unit beyond the first 2 adds +1 points to the attacker's die roll. Artillery units add an additional +1 points to the attacker's die roll.
+\end{itemize}
+
+\textbf{Siege outcome:}
+\begin{itemize}[leftmargin=1.2cm]
+  \item If attacker total is higher, the defender's structure becomes destroyed and is removed from the board.
+  \item If defender total is equal or higher, siege fails and attacker loses 1 military unit from the committed forces.
+\end{itemize}
+
+\section{Center of Operation Capture}
+\index{Center of Operation!capture}
+If a player's Center of Operation is on a tile that becomes occupied by an opponent's military units, the opponent may attempt to capture it with at least 2 committing military units. The capture attempt follows the following procedure:
+\begin{itemize}[leftmargin=1.2cm]
+  \item Attacker rolls 2 dice, adding +1 points for each committed military unit beyond the first 2. Artillery units add an additional +1 points to the attacker's die roll.
+  \item Defender rolls 2 dice, adding +1 points for each remaining military unit in the tile.
+\end{itemize}
+
+\textbf{Capture outcome:}
+\begin{itemize}[leftmargin=1.2cm]
+  \item If attacker total is higher, the Center of Operation is captured and transferred to the attacker. Any remaining defending military units in the tile are removed, and the attacker may place up to 3 of their own \textbf{infantry} units from reserve onto that tile.
+  \item If defender total is equal or higher, capture fails and attacker loses 1 military unit from the committed forces.
+\end{itemize}
+
+\section{Faction Cooperation}
+\index{faction cooperation}
+Players on the same faction may freely share resources and place military units on the same tile without initiating combat. However, they cannot share victory points or development cards, and cannot command each other's military units.
+
+\section{Ending the War}
+\index{victory conditions!war phase}
+The Great War ends inmediately when one of the following conditions is met:
+\begin{itemize}[leftmargin=1.2cm]
+  \item All of the faction's buildings are destroyed or captured by the opposing faction.
+  \item All but one player have been eliminated from the game.
+  \item A faction voluntarily surrenders by conceding defeat to the opposing faction.
+\end{itemize}
+
+If the war ends by any of the above conditions, all remaining players on the winning faction are declared victors, even if they have not reached the standard victory point threshold.
+
+If an individual player reaches 12 victory points during the war, that player is declared the sole victor, and the war ends immediately.
+
+\begin{warningbox}
+  If a player desires to be the sole victor of the war, they may declare a \textbf{Defection} against their current faction. Upon doing so they immediately become an Independent Faction. As an Independent Faction the player is no longer bound by faction cooperation rules and may pursue an individual victory under the stated victory conditions.
+\end{warningbox}
+
+\end{document}
